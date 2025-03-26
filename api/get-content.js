@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-    const GITHUB_REPO = "SyuneHovan/syuniq";
+    const GITHUB_REPO = "SyuneHovhan/syuniq";
     const FILE_PATH = "content.html";
     const GITHUB_TOKEN = process.env.GITHUB_TOKEN; 
 
@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         });
         const data = await response.json();
 
-        res.status(200).send(GITHUB_TOKEN);
+        res.status(200).send(data);
 
         if (data.content) {
             const content = Buffer.from(data.content, "base64").toString("utf8");

@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
     if (req.method !== "POST") return res.status(405).send("Method Not Allowed");
 
-    const GITHUB_REPO = "SyuneHovan/syuniq";
+    const GITHUB_REPO = "SyuneHovhan/syuniq";
     const FILE_PATH = "content.html";
     const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
     const { content } = req.body;
